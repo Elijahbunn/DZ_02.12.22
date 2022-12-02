@@ -1,0 +1,40 @@
+This bot was created by a team of geeks for geeks like themselves.
+We want to provide you with a complete guide to various fantasy-themed works for interesting leisure.
+Of course, while our libraries are not complete, but, we assure you, hundreds more items are rummaging through our heads, for which we want to give a full-fledged
+description to include in this honorable list.
+
+This version of the bot has three functions:
+1) Creation of a text or Excel file with a description and characteristics of one or more
+random fantasy characters.
+
+Love to play board games? Or write your own
+work, becoming the new Tolkien or Martin? For a long time you can not choose the appearance
+your character in the new MMORPG? Do you want to create a picture in a neural network according to the description?
+Our team of geeks is happy to help you! Every week we update our databases with new ones.
+descriptions of various characters, inventing new races and adding lore to them.
+We do all this to help YOU create and develop your own universes.
+
+2) The bot can offer a selection of films and series for every taste of a fantasy fan.
+
+Tired of watching The Lord of the Rings? Okay, we know it can't get boring...
+But maybe you want to watch something new? Our team has selected a few for you.
+great options to brighten up the evening! For ease of selection, we have provided an annotation to
+each picture, and also attached a link to Kinopoisk or other relevant service for
+online viewing so you can immediately start exploring a new universe!
+
+3) The bot also offers a selection of games.
+
+An avid player and think that you have already beaten everything you can? In that case, our
+The team is challenging you! We present to your attention a list of the best fantasy-themed games.
+There are both quite old works, time-tested, and new projects.
+with great potential. By the way, the same applies to board games!
+
+
+P.S.: Our data libraries are constantly updated with new names, and the bot will continue
+grow in your abilities. Therefore, if you, as a devoted fan of fantasy, have read
+with all the material we have proposed, then:
+	1 - Please accept our sincere admiration and gratitude! We are glad that in our
+	there are people in the world so dedicated to our favorite genre!
+	2 - wait a bit and please give us time... We will be back for
+	the third day of your waiting and we will bring a whole army of new
+	opportunities for you!
