@@ -7,14 +7,14 @@ bot = creat()
 
 
 logging.basicConfig(filename="server.log", level=logging.INFO)
-logging.debug("This is a debug message")
-logging.info("Informational message")
-logging.error("An error has happened!")
+# logging.debug("This is a debug message")
+# logging.info("Informational message")
+# logging.error("An error has happened!")
 
 @bot.message_handler(commands=['start'])
 def start(message):
     mess = f'Привет, <b>{message.from_user.first_name}</b>'
-
+    logging.info("Бот успешно стартанул")
     bot.send_message(message.chat.id, mess,
                      parse_mode='html', reply_markup=keyboard)
 
@@ -27,6 +27,7 @@ def get_user_photo(message):
 # keyboard
 def read_file():
     with open('info.txt', 'r') as txt_file: text1 = str(txt_file.read())
+    logging.info("Открыт файл info.txt")
     return text1
 
 keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -51,8 +52,12 @@ bot.send_message
 def get_user_info(message):
     # if message.chat.type == 'private':
     if message.text == 'Во что поиграть???':
+        
+        logging.info("Нажата кнопка 'Во что поиграть???'")
+        
         photo = open('photo.png', 'rb')
         bot.send_photo(message.chat.id, photo)
+        
     if message.text == 'Во что поиграть???':
         markup = types.InlineKeyboardMarkup(row_width=2)
         item1 = types.InlineKeyboardButton(
@@ -70,6 +75,9 @@ def get_user_info(message):
        
         #  begin что посмотреть 
     elif message.text.lower() == 'что посмотреть?':
+        
+        logging.info("Нажата кнопка 'что посмотреть?'")
+        
         photo = open('cinema.jpg', 'rb')
         bot.send_photo(message.chat.id, photo)
         inMurkup = types.InlineKeyboardMarkup(row_width=2)
@@ -95,15 +103,21 @@ def get_user_info(message):
         # end что посмотреть
 
     elif message.text == 'создание персонажа':
+        
+        logging.info("Нажата кнопка 'создание персонажа'")
+        
         photo = open('Аватар функции 1.jpg', 'rb')
         bot.send_photo(message.chat.id, photo)
         markup = types.InlineKeyboardMarkup()
         item1 = types.InlineKeyboardButton(
             'Текстовый документ', callback_data='Text_Doc')
+                            
         item2 = types.InlineKeyboardButton(
             'Excel-файл с одним персонажем', callback_data='Excel_one_character')
+                        
         item3 = types.InlineKeyboardButton(
             'Excel-таблицу с множеством персонажей', callback_data='Excel_only_character')
+            
         markup.add(item1)
         markup.add(item2)
         markup.add(item3)
@@ -119,6 +133,9 @@ def callback_inline(call):
     try:
         if call.message:
             if call.data == 'PC Game':
+                
+                logging.info("Нажата кнопка 'PC Game'")
+                
                 bot.send_message(call.message.chat.id,
                                  '1. Divinity original sin')
                 bot.send_message(
@@ -140,6 +157,9 @@ def callback_inline(call):
                 bot.send_message(
                     call.message.chat.id, 'https://store.steampowered.com/app/311290/SpellForce_3_Reforced/')
             elif call.data == 'Board Game':
+                
+                logging.info("Нажата кнопка 'Board Game'")
+                
                 bot.send_message(call.message.chat.id,
                                  '1. Dungeons & Dragons. Врата Балдура: Нисхождение в Авернус')
                 bot.send_message(call.message.chat.id,
@@ -161,6 +181,9 @@ def callback_inline(call):
                 bot.send_message(
                     call.message.chat.id, 'https://hobbygames.ru/vojni-chjornoj-rozi')
             elif call.data == 'Text_Doc':
+                
+                logging.info("Выбран тип 'Текстовый документ'")
+                
                 photo = open('Аватар функции 4.jpg', 'rb')
                 bot.send_photo(call.message.chat.id, photo)
                 t1.text_file2()
@@ -168,12 +191,18 @@ def callback_inline(call):
                 bot.send_document(call.message.chat.id, doc)
                 #bot.send_document(call.message.chat.id, "Общий список с переносами.txt")
             elif call.data == 'Excel_one_character':
+                
+                logging.info("Выбран тип 'Excel-файл с одним персонажем'")
+                
                 photo = open('Аватар функции 5.jpg', 'rb')
                 bot.send_photo(call.message.chat.id, photo)
                 con.character_creater()
                 doc = open("Persona.xls", 'rb')
                 bot.send_document(call.message.chat.id, doc)
             elif call.data == 'Excel_only_character':
+                
+                logging.info("Выбран тип 'Excel-таблица с множеством персонажей'")
+                
                 photo = open('Аватар функции 3.jpg', 'rb')
                 bot.send_photo(call.message.chat.id, photo)
                 t1.Excel_All()

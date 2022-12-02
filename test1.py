@@ -37,7 +37,7 @@ random.shuffle(list8)
 record = zip(list1, list2, list3, list4, list5, list6, list7, list8)
 record3 = zip(list1, list2, list3, list4, list5, list6, list7, list8)
 result = list(record3)
-print(f'THIS IS RESULT1: {result}')
+#print(f'THIS IS RESULT1: {result}')
 def test_An():
     vn_result = list(result[0])
     return vn_result
@@ -68,7 +68,7 @@ def text_file2():
     record1 = zip(list1, list2, list3, list4, list5, list6, list7, list8)
     with open("Команда персонажей.txt", "w") as file1:
             for SaveToFileOne in (record1):
-                print(f' THIS IS SaveToFileOne: {SaveToFileOne}')
+                #print(f' THIS IS SaveToFileOne: {SaveToFileOne}')
                 ToFile1 = (list(SaveToFileOne))
                 number_charact.number_charactristic(ToFile1)
                 print(ToFile1)  
